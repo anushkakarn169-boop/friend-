@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Children's Day Betttuu ❤️</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Trebuchet MS', sans-serif;
+  background: #fff5ed;
+  color: #99566d;
+  text-align: center;
+}
+
+header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  background: linear-gradient(135deg, #ffe0e9, #fff5ed);
+}
+
+h1 {
+  font-size: clamp(2.3rem, 8vw, 4rem);
+  margin-bottom: 10px;
+}
+
+.teddy {
+  font-size: 90px;
+  animation: bounce 2s infinite;
+}
+
+button {
+  border: none;
+  background: #e99ab4;
+  color: white;
+  padding: 13px 25px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+section {
+  padding: 55px 20px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+  max-width: 650px;
+  margin: 25px auto;
+}
+
+.photo {
+  background: #f8dce5;
+  border: 3px solid white;
+  border-radius: 18px;
+  padding: 10px;
+  min-height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.letter {
+  max-width: 600px;
+  margin: auto;
+  padding: 28px;
+  background: #ffe7e9;
+  border-radius: 22px;
+  text-align: left;
+  line-height: 1.8;
+}
+
+textarea {
+  width: 100%;
+  min-height: 180px;
+  padding: 15px;
+  border: 2px solid #efb6c8;
+  border-radius: 12px;
+  background: #fffaf7;
+  color: #99566d;
+  font: inherit;
+  line-height: 1.7;
+  resize: vertical;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  padding: 35px;
+  background: #ffe0e9;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="teddy">🧸</div>
+  <h1>Happy Children's Day!</h1>
+  <h2>My Betttuu ❤️</h2>
+  <p>A little surprise for my favourite little boy...</p>
+  <button onclick="document.getElementById('gallery').scrollIntoView({behavior:'smooth'})">
+    Open your surprise 🎁
+  </button>
+</header>
+
+<section id="gallery">
+  <h1>A little gallery of YOUR CUTTESTT PICS📸🐻</h1>
+  <p>Because your pictures deserve their own little corner.</p>
+
+  <div class="gallery">
+    <div class="photo">
+      <img src="C:\Users\LENOVO\OneDrive\Documents\children\1.jpeg" alt="My cuttuuu">
+    </div>
+    <div class="photo">
+      <img src="C:\Users\LENOVO\Downloads\2.jpeg" alt="Fav smile">
+    </div>
+    <div class="photo">
+      <img src="C:\Users\LENOVO\OneDrive\Documents\children\3.jpeg" alt="Mera handsome babbyy">
+    </div>
+    <div class="photo">
+      <img src="C:\Users\LENOVO\OneDrive\Documents\children\4.jpeg" alt="Gadhuuuu">
+    </div>
+  </div>
+</section>
+
+<section>
+  <h1>A tiny letter 💌</h1>
+
+  <div class="letter">
+    <h2>Mera Betttuu, ❤️</h2>
+
+    <div id="letterDisplay">
+      Happy Children's Day to my little babbyyy!
+      i lovee youu sooo muchh and it grows more each and every day🥹🫶
+      i just want you to smile as always and always be happyyy❤️😘
+
+      You will always be my favourite little boy. ♡
+    </div>
+
+    <br>
+
+    <button onclick="editLetter()">Edit Letter ✏️</button>
+    <button onclick="saveLetter()">Save Letter ❤️</button>
+
+    <textarea id="letterEditor" class="hidden"></textarea>
+
+    <p style="text-align:right;">
+      Lots of love,<br>
+      Your favourite person ♡
+    </p>
+  </div>
+</section>
+
+<section>
+  <h1>One last surprise 🎀</h1>
+  <button onclick="showSurprise()">Click me, Babbyy!</button>
+  <h2 id="surprise" class="hidden">
+    You're my favourite person, my forever favourite and first child
+    and my forever favourite idiot! i will always love not like aunty jii that love is uncomareable but will always try to comfort you😘❤️
+  </h2>
+</section>
+
+<footer>
+  Made with endless love for Mera cuttuu Bacchaaa ♡<br>
+  Happy Children's Day! 🧸
+</footer>
+
+<script>
+const display = document.getElementById("letterDisplay");
+const editor = document.getElementById("letterEditor");
+
+function editLetter() {
+  editor.value = display.innerText;
+  editor.classList.remove("hidden");
+  display.classList.add("hidden");
+}
+
+function saveLetter() {
+  display.innerText = editor.value;
+  display.classList.remove("hidden");
+  editor.classList.add("hidden");
+}
+
+function showSurprise() {
+  document.getElementById("surprise").classList.toggle("hidden");
+}
+</script>
+
+</body>
+</html>
